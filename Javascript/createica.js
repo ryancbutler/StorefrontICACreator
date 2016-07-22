@@ -17,17 +17,6 @@ function getCookie(name)
     return (value != null) ? unescape(value[1]) : null;
  }
 
-//removes cookies 
-function deleteAllCookies() {
-    var cookies = document.cookie.split(";");
-
-    for (var i = 0; i < cookies.length; i++) {
-    	var cookie = cookies[i];
-    	var eqPos = cookie.indexOf("=");
-    	var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-    	document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-}
 
 //Gets ICA url
 function geturl(resources, whatapp) {
@@ -60,21 +49,25 @@ function getica(unauthurl, icaurl) {
 //Function to kick things off.  Grabs tokens needed for process
 function starticaurl (unauthurl, whatapp) {
 var finalurl = "";
+var csrf = getCookie("CsrfToken");
 var xhr = new XMLHttpRequest();
+
 xhr.open("POST",(unauthurl + "/Home/Configuration"),true);
 xhr.setRequestHeader("Accept",'application/xml, text/xml, */*; q=0.01');
 xhr.setRequestHeader("X-Citrix-IsUsingHTTPS","Yes");
+xhr.setRequestHeader("Csrf-Token",csrf);
 xhr.send();
+
 
 xhr.open("POST",(unauthurl + "Resources/List"),true);
 xhr.setRequestHeader("Accept",'application/json, text/javascript, */*; q=0.01');
 xhr.setRequestHeader("Content-Type",'application/x-www-form-urlencoded; charset=UTF-8');
 xhr.setRequestHeader("X-Citrix-IsUsingHTTPS","Yes");
 xhr.setRequestHeader("format",'json&resourceDetails=Default');
+xhr.setRequestHeader("Csrf-Token",csrf);
 
 xhr.onreadystatechange = function() {
 
-//once data is received
    if (xhr.readyState == 4) {
     var myjson = JSON.parse(xhr.responseText);
 	resources = myjson.resources;
@@ -89,8 +82,7 @@ xhr.send();
 
 }
 
-//Starts script here
-deleteAllCookies();
+//Starts Script
 starticaurl(unauthurl, whatapp);
 
 
