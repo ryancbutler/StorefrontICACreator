@@ -11,5 +11,10 @@ Date: 7-20-16
 ## Powershell v3 
 Uses PowerShell web requests to create, download and launch a Citrix ICA file via an unauthenicated Storefront URL.  Currently uses PowerShell v3.
 
+`./get-ICAfile_v3.ps1 -unauthurl "https://storefront.mydomain.local/Citrix/unauthWeb/" -appname "Notepad++" -icapath "C:\temp\myicapath.ica"`
+
+
 ## Javascript
-Uses XMLHTTP request to create and download a Citrix ICA file via an unauthenicated Storefront URL
+Uses XMLHTTP request and JSON2 to create and download a Citrix ICA file via an unauthenicated Storefront URL
+
+`<button onclick="starticaurl('https://storefront.mydomain.local/Citrix/unauthWeb/', 'Notepad++')">Launch App</button>`
