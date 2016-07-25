@@ -3,6 +3,8 @@
 Version: 0.8
 Date: 7-20-16
 
+[See blog for more information.](http://techdrabble.com/citrix/21-create-ica-from-storefront-using-powershell-or-javascript)
+
 # Requirments
 * For PowerShell v3 must be installed
 * Unauthenticated StoreFront Store must be created
