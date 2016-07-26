@@ -1,5 +1,7 @@
 # Storefront ICA file creator
 
+Tested with Storefront 3.6
+
 Version: 0.8
 
 Date: 7-20-16
