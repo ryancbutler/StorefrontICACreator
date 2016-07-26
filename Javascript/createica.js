@@ -48,7 +48,7 @@ function starticaurl (unauthurl, whatapp) {
 	var csrf = getCookie("CsrfToken");
 	var xhr = new XMLHttpRequest();
 
-	xhr.open("POST",(unauthurl + "/Home/Configuration"),true);
+	xhr.open("POST",(unauthurl + "Home/Configuration"),true);
 	xhr.setRequestHeader("Accept",'application/xml, text/xml, */*; q=0.01');
 	xhr.setRequestHeader("X-Citrix-IsUsingHTTPS","Yes");
 	xhr.setRequestHeader("Csrf-Token",csrf);
