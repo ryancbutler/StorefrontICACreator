@@ -12,7 +12,7 @@ Date: 7-20-16
 
 [See blog for more information.](http://techdrabble.com/citrix/21-create-an-ica-file-from-storefront-using-powershell-or-javascript)
 
-## Requirments
+## Requirements
 * For PowerShell v3 must be installed
 * Unauthenticated StoreFront Store must be created for JavaScript
 * Anonymous Delivery Group must be created for JavaScript
