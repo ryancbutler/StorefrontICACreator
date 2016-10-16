@@ -9,6 +9,7 @@ Date: 7-20-16
 ## Changelog:
 
 7-26-16: Added PowerShell script for accessing authenticated store 
+
 10-16-16 : Removed get-ICAfile_v3_auth.ps1 from branch master and moved to auth while troubleshooting.  Not working with recent release of Storefront.
 
 [See blog for more information.](http://techdrabble.com/citrix/21-create-an-ica-file-from-storefront-using-powershell-or-javascript)
