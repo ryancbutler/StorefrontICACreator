@@ -3,9 +3,6 @@
    A PowerShell script that creates, downloads and runs Citrix ICA file from authenticated store
    Author: Ryan Butler 7-26-16
    Version: 0.9
-   Updates: 
-    10-10-16 Minor changes for StoreFront 3.7
-    10-28-16 Added check for multiple apps found
 .DESCRIPTION
    A Powershell v3 Script that utilizes invoke-webrequest to create, download and launch an application via Citrix ICA file from Storefront.  Script uses explict authentication.
 .PARAMETER sfurl 
