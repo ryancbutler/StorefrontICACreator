@@ -13,12 +13,12 @@ Date: 7-20-16
 [See blog for more information.](http://techdrabble.com/citrix/21-create-an-ica-file-from-storefront-using-powershell-or-javascript)
 
 ## Requirements
-* For PowerShell v3 must be installed
+* [PowerShell v4](https://www.microsoft.com/en-us/download/details.aspx?id=40855) or greater must be installed
 * Unauthenticated StoreFront Store must be created for JavaScript
 * Anonymous Delivery Group must be created for JavaScript
 
-## Powershell v3 
-Uses PowerShell web requests to create, download and launch a Citrix ICA file via an unauthenicated or authenticated Storefront URL.  Currently uses PowerShell v3.
+## Powershell 
+Uses PowerShell web requests to create, download and launch a Citrix ICA file via an unauthenicated or authenticated Storefront URL.  Currently uses PowerShell.
 
 `.\get-ICAfile_v3.ps1 -unauthurl "https://storefront.mydomain.local/Citrix/unauthWeb/" -appname "Notepad++" -icapath "C:\temp\myica.ica"`
 
