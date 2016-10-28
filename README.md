@@ -5,11 +5,9 @@ Tested with Storefront 3.7
 Date: 7-20-16
 
 ## Changelog:
+Refer to [Releases](https://github.com/ryancbutler/StorefrontICACreator/releases) 
 
-7-26-16: Added PowerShell script for accessing authenticated store 
-
-10-16-16: Minor changes to auth script for StoreFront 3.7.  Code cleanup
-
+## How to:
 [See blog for more information.](http://techdrabble.com/citrix/21-create-an-ica-file-from-storefront-using-powershell-or-javascript)
 
 ## Requirements
