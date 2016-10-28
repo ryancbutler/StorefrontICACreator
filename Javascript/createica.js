@@ -1,7 +1,7 @@
 //Requests ICA file from Storefront utilzing an unauthenticated Store
 //Author: Ryan Butler
 //Date: 7-22-16
-//Version: 0.8 Proof of concept
+//Version: 0.9
 //Notes: JSON2 is requried if using IE 8 or lower
 
 //unauthenticated store (plese note the trailing /)
