@@ -1,11 +1,8 @@
-﻿<#
+<#
 .SYNOPSIS
    A PowerShell script that creates, downloads and runs Citrix ICA file from unauthenicated store
    Author: Ryan Butler 7-20-16
    Version: 0.9
-   Updates:
-    10/28/2016: Added check for multiple apps found
-
 .DESCRIPTION
    A Powershell v3 Script that utilizes invoke-webrequest to create, download and launch an application via Citrix ICA file from Storefront.  Script requires an unauthenticated store and unauthenticated published application.
 .PARAMETER unauthurl 
