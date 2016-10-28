@@ -1,11 +1,9 @@
 # Storefront ICA file creator
 
-Tested with Storefront 3.7
-
-Date: 7-20-16
+Created Date: 7-20-16
 
 ## Changelog:
-Refer to [Releases](https://github.com/ryancbutler/StorefrontICACreator/releases) 
+Refer to [Releases](https://github.com/ryancbutler/StorefrontICACreator/releases) for updates
 
 ## How to:
 [See blog for more information.](http://techdrabble.com/citrix/21-create-an-ica-file-from-storefront-using-powershell-or-javascript)
