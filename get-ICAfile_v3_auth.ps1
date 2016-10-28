@@ -2,8 +2,10 @@
 .SYNOPSIS
    A PowerShell script that creates, downloads and runs Citrix ICA file from authenticated store
    Author: Ryan Butler 7-26-16
-   Updates: 10-10-16 Minor changes for StoreFront 3.7
    Version: 0.9
+   Updates: 
+    10-10-16 Minor changes for StoreFront 3.7
+    10-28-16 Added check for multiple apps found
 .DESCRIPTION
    A Powershell v3 Script that utilizes invoke-webrequest to create, download and launch an application via Citrix ICA file from Storefront.  Script uses explict authentication.
 .PARAMETER sfurl 
@@ -158,16 +160,22 @@ $content = Invoke-WebRequest -Uri ($sfurl + "Resources/List") -Method POST -Head
 $resources = $content.content | convertfrom-json
 $resourceurl = $resources.resources|where{$_.name -like $appname}
 
-Invoke-WebRequest -Uri ($sfurl + $resourceurl.launchurl + '?CsrfToken=' + $csrf.value + "&IsUsingHttps=Yes") -Method GET -WebSession $SFSession -OutFile $icapath|Out-Null
-
-
-if (test-path $icapath)
+if ($resourceurl.count)
 {
-    write-host "Launching created ICA..."
-    Start-Process $icapath
+    write-host "MULTIPLE APPS FOUND for $appname.  Check APP NAME!" -ForegroundColor Red
+    $resourceurl|select id,name
 }
 else
-{
-    write-host "ICA not found check configuration"
+{  
+Invoke-WebRequest -Uri ($sfurl + $resourceurl.launchurl + '?CsrfToken=' + $csrf.value + "&IsUsingHttps=Yes") -Method GET -WebSession $SFSession -OutFile $icapath|Out-Null
+    if (test-path $icapath)
+    {
+        write-host "Launching created ICA..."
+        Start-Process $icapath
+    }
+    else
+    {
+        write-host "ICA not found check configuration"
+    }
 }
 
