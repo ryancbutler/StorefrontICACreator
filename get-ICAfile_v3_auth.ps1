@@ -1,8 +1,41 @@
-﻿<#
+<#PSScriptInfo
+
+.VERSION 1.0
+
+.GUID a827a25d-8def-496f-9474-53fdfdbc2450
+
+.AUTHOR @ryan_c_butler
+
+.COMPANYNAME Techdrabble.com
+
+.COPYRIGHT 2017
+
+.TAGS Storefront ICA PublishedApps Citrix
+
+.LICENSEURI https://github.com/ryancbutler/StorefrontICACreator/blob/master/License.txt
+
+.PROJECTURI https://github.com/ryancbutler/StorefrontICACreator
+
+.ICONURI 
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+05-20-16: Initial Release
+08-27-17: Formatting for PS Gallery
+
+#> 
+
+
+
+
+<#
 .SYNOPSIS
    A PowerShell script that creates, downloads and runs Citrix ICA file from authenticated store
-   Author: Ryan Butler 7-26-16
-   Version: 0.9
 .DESCRIPTION
    A Powershell v3 Script that utilizes invoke-webrequest to create, download and launch an application via Citrix ICA file from Storefront.  Script uses explict authentication.
 .PARAMETER sfurl 
